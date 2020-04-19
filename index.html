@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>PSI Lab7</title>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+		
+		<div class="console_container console_compact" id="console_container">
+			<div class="console" id="console">
+				<h1>Console</h1>
+			</div>
+		
+		</div>
+		
+		
+		<div class="menu_top">
+			<div class="button button_train">
+				<p class="button_train_id" id="train">Train</p>
+				<input class="input_epochs" type="text" id="epochInput" placeholder="Epochs">
+				<div class="progress_bar_container"><div class="progress_bar" id="progress_bar"></div><p id="progress_bar_p">0%</p></div>
+			</div>
+			<div class="button button_predict" id="predict" disabled><p class="push_up">Predict</p></div>
+			<div class="button button_clear" id="clear" disabled><p class="push_up">Clear</p></div>
+			<div style="clear:both"></div>
+		</div>
+		
+		<div class="program_container">
+			<div class="canvas_padding">&nbsp </div>
+			
+			<div class="canvas_container">
+				<div class="canvas_help" id="canvas_help"><p>Draw a number from 0-9 <br/> here</p></div>
+				<canvas class="canvas"></canvas>
+			</div>
+			
+			<div class="arrow_container">
+				<div class="arrow_image_container">
+					<img class="arrow_image" src="arrow.png"/>
+				</div>
+			</div>
+			
+			<div class="result_container">
+				<div class="result"><p id="result"></p></div>
+			</div>
+			
+			<div class="result_padding">&nbsp </div>
+			
+		</div>
+		
+        <script src="main.js"></script>        
+    </body>
+</html>

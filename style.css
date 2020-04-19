@@ -1,0 +1,273 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.push_up
+{
+	position: relative;
+	bottom: 30px;
+}
+
+body {
+	background: #222;
+}
+
+/* MENU */
+
+.menu_top {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50px;
+}
+
+.button {
+	width: calc(33.33333% - 2px);
+	height: 240px;
+	background: #222;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	transition: 0.1s;
+	text-align: center;
+	color: #EEE;
+	font-size: 90px;
+	float: left;
+	font-family: 'Bebas Neue', cursive;
+}
+
+.button p {
+	margin-top: 60px;
+}
+
+.button_train p {
+	margin-top: 30px;
+}
+
+.button:hover {
+	background: #444;
+	transition: 0.05s;
+}
+
+.button_train p#train:hover, .button_predict:hover, .button_clear:hover {
+	cursor: pointer;
+}
+
+.button_train p {
+	margin-bottom: -46px;
+}
+
+.button_train_disabled {
+	pointer-events: none;
+	cursor: auto;
+	color: #777;
+}
+.button_train, .button_clear {
+	border-bottom: 2px solid #555;
+}
+
+.button_predict {
+	border-bottom: 2px solid #555;
+	border-left: 2px solid #555;
+	border-right: 2px solid #555;
+}
+
+.input_epochs {
+	height: 50px;
+	width:100px;
+	color: #CCC;
+	font-size: 20px;
+	text-align: left;
+	padding-left:5px;
+	background: rgba(255, 255, 255, 0);
+	border: 0;
+	border-top: 2px solid #555;
+	border-bottom: 2px solid #555;
+	margin: 0 auto;
+	text-align: center;
+	padding: 0;
+	transition: 0.1s;
+}
+
+.input_epochs:focus {
+	outline: none;
+	color: #FFF;
+	background: rgba(255, 255, 255, 0.1);
+	transition: 0.05s;
+}
+
+.progress_bar_container {
+	height: 20px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	padding: 0;
+}
+
+.progress_bar {
+	height: 20px;
+	width: 0%;
+	background: #141;
+	margin: 0;
+	padding: 0;
+	transition: width 0.3s;
+}
+
+.progress_bar_container p {
+	margin: 0;
+	margin-top:-22px;
+	padding: 0;
+	color: #CCC;
+	font-size: 20px;
+	text-align: center;
+}
+
+/* PROGRAM */
+
+.program_container {
+	margin: 0 auto;
+	margin-top:50px;
+}
+
+.canvas {
+	margin-left:0;
+	float:left;
+}
+
+.canvas_padding {
+	width: calc(42% - 280px);
+	float: left;
+}
+
+.canvas_container {
+	width: 280px;
+	height: 280px;
+	float:left;
+}
+
+.canvas_help {
+	opacity: 100%;
+	width: 280px;
+	height: 280px;
+	position: absolute;
+	background: radial-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.07));
+	transition: opacity 0.1s;
+}
+
+.canvas_help:hover {
+	opacity: 0%;
+}
+
+.canvas_help p {
+	color: #FFF;
+	margin-top:50px;
+	font-size: 50px;
+	text-align: center;
+	pointer-events: none;
+}
+
+.arrow_image {
+	display:block;
+	margin: 0 auto;
+	width: 80%;
+	filter: brightness(140%);
+	margin-top: 100px;
+}
+
+.arrow_container {
+	width: 12%;
+	height: 280px;
+	float:left;
+}
+
+.arrow_image_container {
+	margin:0 auto;
+}
+
+.result_container {
+	width: 280px;
+	height: 280px;
+	padding-top:-10px;
+	float:left;
+}
+
+.result {
+	width: 280px;
+	height: 280px;
+	background: #000;
+}
+
+.result p {
+	margin: 0;
+	padding: 0;
+	font-size:230px;
+	text-align:center;
+	color: #FFF;
+	font-family: 'Lato', sans-serif;
+}
+
+.result_padding {
+	width:calc(42% - 280px);
+	float:left;
+}
+
+/* CONSOLE */
+
+.console_container {
+	opacity: 1;
+	position:fixed;
+	width:30%;
+	height: 100vh;
+	bottom: 0;
+	pointer-events: none;
+	font-family: 'Cutive Mono', monospace;
+	background: rgba(0,0,0,0.2);
+	transition: opacity 0.1s;
+}
+
+.console {
+	position:absolute;
+	width:90%;
+	bottom:0;
+	color: #FFF;
+	margin-left:20px;
+}
+
+.console_compact {
+	-webkit-mask-image: linear-gradient(rgba(0,0,0,0.0) 85%, rgba(0,0,0,1) 90%);
+	mask-image: linear-gradient(rgba(0,0,0,0.0) 85%, rgba(0,0,0,1) 90%);
+}
+
+.console h1 {
+	font-size: 40px;
+	margin-left:10px;
+	text-shadow: 0 0 3px rgba(255, 255, 0, 0.9);
+}
+
+.console p {
+	margin-left:30px;
+	font-size: 17px;
+	margin-top: 5px;
+	color: #FFF;
+	text-shadow: 0 0 4px rgba(0, 0, 0, 1);
+}
+
+.console p.console_warning {
+	color: #F22;
+}
+
+.console p.console_button {
+	color: #FF2;
+	text-decoration: underline;
+	pointer-events: auto;
+	cursor: pointer;
+}
+
+.console p.console_button_clicked {
+	color: #999;
+	pointer-events: none;
+	cursor: auto;
+}
